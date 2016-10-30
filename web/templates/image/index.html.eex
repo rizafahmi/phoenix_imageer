@@ -1,0 +1,1 @@
+<h4><%= link "Upload new image", to: image_path(@conn, :new) %></h4>
