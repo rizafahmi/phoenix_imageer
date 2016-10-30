@@ -18,7 +18,7 @@ defmodule Imageer.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Imageer, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :arc_ecto,
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :arc_ecto, :ex_aws, :httpoison, :poison,
                     :phoenix_ecto, :postgrex]]
   end
 
@@ -39,6 +39,9 @@ defmodule Imageer.Mixfile do
      {:gettext, "~> 0.11"},
      {:arc, "~> 0.5.2"},
      {:arc_ecto, "~> 0.4.4"},
+     {:ex_aws, "~> 0.5.0"},
+     {:poison, "~> 2.0"},
+     {:httpoison, "~>0.9.0"},
      {:cowboy, "~> 1.0"}]
   end
 

@@ -41,3 +41,19 @@ config :imageer, Imageer.Repo,
   database: "imageer_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :arc,
+  bucket: "appscoastfm",
+  virtual_host: true
+
+config :ex_aws,
+  access_key_id: System.get_env("AWS_ID"),
+  secret_access_key: System.get_env("AWS_SECRET"),
+  region: "ap-southeast-1",
+  host: "s3-ap-southeast-1.amazonaws.com",
+  s3: [
+    schema: "http://",
+    host: "s3-ap-southeast-1.amazonaws.com",
+    region: "ap-southeast-1"
+  ]
+

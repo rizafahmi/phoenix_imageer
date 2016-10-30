@@ -2,7 +2,7 @@ defmodule Imageer.ImageUploader do
   use Arc.Definition
   use Arc.Ecto.Definition
 
-  def __storage, do: Arc.Storage.Local
+  # def __storage, do: Arc.Storage.Local
 
   # Include ecto support (requires package arc_ecto installed):
   # use Arc.Ecto.Definition
