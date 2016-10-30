@@ -1,1 +1,5 @@
 <h4><%= link "Upload new image", to: image_path(@conn, :new) %></h4>
+<%= for image <- @images do %>
+<img src="<%= Imageer.ImageUploader.url({image.image, image}) %>">
+<hr />
+<% end %>
