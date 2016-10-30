@@ -1,8 +1,9 @@
 defmodule Imageer.Image do
   use Imageer.Web, :model
+  use Arc.Ecto.Schema
 
   schema "images" do
-    field :image, :string
+    field :image, Imageer.ImageUploader.Type
 
     timestamps()
   end
@@ -13,6 +14,6 @@ defmodule Imageer.Image do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:image])
-    |> validate_required([:image])
+    |> cast_attachments(params, [:image])
   end
 end
