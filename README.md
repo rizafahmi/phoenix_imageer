@@ -1,5 +1,7 @@
 # Imageer
 
+A walkthrough upload file using Arc and ArcEcto to local and S3.
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
